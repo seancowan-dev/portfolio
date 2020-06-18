@@ -1,6 +1,43 @@
+@font-face {
+  font-family: 'Yellowtail';
+  src: url('/fonts/Yellowtail-Regular.ttf') format('embedded-opentype'), /* Internet Explorer */
+  url('/fonts/Yellowtail-Regular.ttf') format('woff2'), /* Super Modern Browsers */
+  url('/fonts/Yellowtail-Regular.ttf') format('woff'), /* Pretty Modern Browsers */
+  url('/fonts/Yellowtail-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+  url('/fonts/Yellowtail-Regular.ttf') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Rhinemetal';
+  src: url('/fonts/1952 RHEINMETALL.ttf') format('embedded-opentype'), /* Internet Explorer */
+  url('/fonts/1952 RHEINMETALL.ttf') format('woff2'), /* Super Modern Browsers */
+  url('/fonts/1952 RHEINMETALL.ttf') format('woff'), /* Pretty Modern Browsers */
+  url('/fonts/1952 RHEINMETALL.ttf')  format('truetype'), /* Safari, Android, iOS */
+  url('/fonts/1952 RHEINMETALL.ttf') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Boogaloo';
+  src: url('/fonts/Boogaloo-Regular.otf') format('embedded-opentype'), /* Internet Explorer */
+  url('/fonts/Boogaloo-Regular.otf') format('woff2'), /* Super Modern Browsers */
+  url('/fonts/Boogaloo-Regular.otf') format('woff'), /* Pretty Modern Browsers */
+  url('/fonts/Boogaloo-Regular.otf')  format('truetype'), /* Safari, Android, iOS */
+  url('/fonts/Boogaloo-Regular.otf') format('svg'); /* Legacy iOS */
+}
+
+/* Global */
+
 .container {
   display: block;
   max-width: 100%!important;
+}
+
+.click-pointer {
+  cursor: url("/images/cursorpoint.png"), auto;
+}
+
+body {
+  background-image: url("/images/bg.jpg");
 }
 
 .text {
@@ -10,6 +47,217 @@
   line-height: 1.5;
 }
 
+hr {
+  display: block;
+  opacity: 0.5;
+  border: 0px;
+  height: 10px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  outline: none;
+  background-image: url("/images/customhr.png");
+}
+
+/* Overlay */
+
+.overlay {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.25;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  min-width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+.one {
+  background-image: url("/images/overlayone.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.two {
+  background-image: url("/images/overlaytwo.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* Primary */
+
+.primary-content {
+  width: 100%;
+}
+
+/* Splash */
+
+.splash {
+  width: 100%;
+  text-align: center;
+}
+
+.main-heading {
+  font-family: Yellowtail;
+}
+
+.splash-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 899px) {
+  .main-heading {
+    font-size: 60px;
+  }
+  .splash-image {
+    width: 340px;
+  }
+}
+
+@media screen and (min-width: 900px) { /* Once the image reaches this screen size, don't want it to grow anymore */
+  .main-heading {
+    font-size: 80px;
+  }
+  .splash-image {
+    max-width: 450px;
+  }
+}
+
+/* About */
+.about-barker-container {
+  background-image: url("/images/aboutbarkermobile.png");
+  margin-left: auto;
+  margin-right: auto;
+  width: 360px;
+  height: 309px;
+}
+
+.about-barker-text {
+  font-family: Rhinemetal;
+  text-align: justify;
+  font-size: 15px;
+  font-weight: 600;
+  width: 360px;
+  height: 309px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+  /* Spacers */
+
+  .space-one {
+    width: 110px;
+    height: 50px;
+    float: left;
+  }
+  .space-two {
+    float: right;
+    width: 210px;
+    height: 30px;
+  }
+
+  .space-three {
+    clear: left;
+    float: left;
+    width: 1px;
+    height: 112px;
+  }
+
+  .space-four {
+    clear: left;
+    float: left;
+    width: 100px;
+    height: 60px;
+  }
+
+  .space-five {
+    clear: left;
+    float: left;
+    width: 125px;
+    height: 90px;
+  }
+
+/* Projects */
+.project-card-container {
+  position: relative;
+  background-image: url("/images/projectsbarker.png");
+  margin-left: auto;
+  margin-right: auto;
+  width: 360px;
+  height: 600px;
+}
+.project-card-text {
+  font-family: Rhinemetal;
+  text-align: justify;
+  font-size: 15px;
+  font-weight: 600;
+  width: 360px;
+  padding-top: 240px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+  .project-card-bullets-container {
+    position: relative;
+    width: 360px;
+    font-family: Boogaloo;
+    font-size: 18px;
+  }
+  .project-bullets-text {
+    position: absolute;
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 256px;
+    height: 97px;
+    left: 10px;
+    top: 3px;
+    z-index: 50;
+  }
+  .built-using {
+    position: absolute;
+    left: 10px;
+    top: 3px;
+    z-index: 30;
+  }
+  .project-heading {
+    position: absolute;
+    left: 0px;
+    top: 130px;
+  }
+  .screenshots-button {
+    position: absolute;
+    right: 0px;
+    top: 130px;
+  }
+  /* Buttons */
+
+  .info-buttons {
+    position: absolute;
+    top: 200px;
+  }
+  .gitbox {
+    left: 40px;
+  }
+
+  .liveapp {
+    left: 125px;
+  }
+  .inner-next {
+    position: absolute;
+    bottom: 70px;
+    right: 160px;
+  }
+
+  .inner-prev {
+    position: absolute;
+    bottom: 50px;
+    right: 240px;
+  }
+
+/* */
 @media screen and (max-width: 767px) {
   .container {
     width: auto!important;
