@@ -159,10 +159,10 @@ hr {
     height: 30px;
   }
 
-  .space-three {
+  .space-three { /*  Functions as left padding */
     clear: left;
     float: left;
-    width: 1px;
+    width: 6px;
     height: 112px;
   }
 

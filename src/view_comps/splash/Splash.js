@@ -10,6 +10,7 @@ const Splash = observer((props) => {
         <hr />
             <AboutBarker />
             <ProjectCard />
+            <img src="/images/contactme.png"></img>
         </div>
     );
 });
