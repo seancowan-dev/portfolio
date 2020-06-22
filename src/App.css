@@ -1,3 +1,5 @@
+@import url("./Keyframes.css");
+
 @font-face {
   font-family: 'Yellowtail';
   src: url('/fonts/Yellowtail-Regular.ttf') format('embedded-opentype'), /* Internet Explorer */
@@ -107,20 +109,21 @@ body {
 .overlay {
   position: absolute;
   pointer-events: none;
-  opacity: 0.25;
-  top: 0px;
-  left: 0px;
+  opacity: 0.05;
+  top: -1000px;
+  left: -1000px;
   width: 300%;
   min-width: 300%;
   height: 300%;
-  z-index: 1000;
+  z-index: 10;
 }
 
 .two {
-  background-image: url("/images/grain.gif");
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background-image: url("/images/grain.png");
+  -webkit-animation: grain 20s steps(10) infinite;
+  -moz-animation: grain 20s steps(10) infinite;
+  -ms-animation: grain 20s steps(10) infinite;
+  animation: grain 20s steps(10) infinite;
   background-size: cover;
 }
 
@@ -209,6 +212,7 @@ hr {
   background-image: url("/images/aboutbarkermobile.png");
   margin-left: auto;
   margin-right: auto;
+  z-index: 20;
 }
 .about-barker-text {
   font-family: Rhinemetal;
@@ -288,6 +292,7 @@ hr {
   margin-right: auto;
   width: 320px;
   height: 500px;
+  z-index: 20;
 }
 .project-card-text {
   font-family: Rhinemetal;
@@ -450,6 +455,7 @@ hr {
     height: 460px;
     margin-left: auto;
     margin-right: auto;
+    z-index: 20;
   }
 
   @media screen and (min-width: 360px) {
