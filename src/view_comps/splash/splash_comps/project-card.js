@@ -9,7 +9,7 @@ const ProjectCard = observer((props) => {
         console.log(evt);
     }
     return (
-        <div className="project-card-container">
+        <div className="project-card-container slide-items">
                 <img className="project-heading" src="/images/projects/findthatmovie/titlebanner.png" />
                 <img className="screenshots-button click-pointer" src="/images/screens.png" />
                 <img className="gitbox info-buttons click-pointer" src="/images/gitbox.png" />

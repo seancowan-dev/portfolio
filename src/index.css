@@ -5,14 +5,22 @@
   box-sizing: border-box;
   cursor: url("/images/cursor.png"), auto;
 }
+html, body, #root, .primary-content {
+  overflow: hidden;
+}
 
+#root {
+  height: 100vh;
+}
 body {
+  position: relative;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
 }
 
 code {
