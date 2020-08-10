@@ -1,14 +1,14 @@
 import React from 'react';
 import { inject, observer } from 'mobx-react';
 
-const ProjectCard = observer((props) => {
+const ProjectCard = inject('helpers')(observer((props) => {
     let handlePrev = (evt) => {
         console.log(evt);
     }
     let handleNext = (evt) => {
         console.log(evt);
     }
-    return (
+    return (<>
         <div className="project-card-container slide-items">
                 <img className="project-heading" src="/images/projects/findthatmovie/titlebanner.png" />
                 <img className="screenshots-button click-pointer" src="/images/screens.png" />
@@ -23,10 +23,11 @@ const ProjectCard = observer((props) => {
                 </p>
                 <img className="built-using" src="/images/built-using.png" />
             </div>
-            <img className="inner-prev click-pointer" src="/images/innerprev.png" onClick={(e) => {handlePrev(e)}} />
+            <img className="inner-prev click-pointer" src="/images/innerprev.png" onClick={(e) => {props.helpers.handleSlideChange(props.helpers.findCurrentSlideInfo(), props.helpers.findNextSlideInfo(), 'forward', 'animate__bounceInUp', 'animate__bounceInUp', 'animate__bounceOutDown')}} />
             <img className="inner-next click-pointer" src="/images/innernext.png" onClick={(e) => {handleNext(e)}} />
         </div>
+        </>
     );
-});
+}));
 
 export default ProjectCard;

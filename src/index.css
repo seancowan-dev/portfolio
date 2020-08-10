@@ -5,9 +5,9 @@
   box-sizing: border-box;
   cursor: url("/images/cursor.png"), auto;
 }
-html, body, #root, .primary-content {
+/* html, body, #root, .primary-content {
   overflow: hidden;
-}
+} */
 
 #root {
   height: 100vh;
